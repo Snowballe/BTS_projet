@@ -31,7 +31,7 @@ namespace Raminagrobis.WPF
         #region LoadPage
         private async void LoadPage(object sender, RoutedEventArgs e)
         {
-            var apiclient = new Client("https://localhost:/44345", new HttpClient());
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
             var adherent = await apiclient.AdherentsGetAsync();
         }
         #endregion
@@ -39,14 +39,16 @@ namespace Raminagrobis.WPF
         #region BtnInsert
         private void BtnInsert(object sender, RoutedEventArgs e)
         {
-            var apiclient = new Client("https://localhost:/44345", new HttpClient());
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
             Adherent_DTO adherent_DTO = new Adherent_DTO();
             adherent_DTO.Societe = InputSociete.Text;
             adherent_DTO.Civilite = InputCivilite.AcceptsReturn;
             adherent_DTO.Nom = InputNom.Text;
-            adherent_DTO.Prenom = InputNom.Text;
+            adherent_DTO.Prenom = InputPrenom.Text;
             adherent_DTO.Email = InputEmail.Text;
             adherent_DTO.Actif = InputActif.AcceptsReturn;
+
+
 
             apiclient.AdherentsPostAsync(adherent_DTO);
         }

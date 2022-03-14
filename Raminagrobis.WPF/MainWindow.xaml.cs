@@ -33,7 +33,7 @@ namespace Raminagrobis.WPF
         #region LoadPage
         private void LoadPage(object sender, RoutedEventArgs e)
         {
-            var apiclient = new Client("https://localhost:/44345", new HttpClient());
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
             GestionnaireDeFenetres.MainWindow = this;
         }
         #endregion

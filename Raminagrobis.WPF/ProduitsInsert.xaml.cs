@@ -30,7 +30,7 @@ namespace Raminagrobis.WPF
         #region LoadPage
         private async void LoadPage(object sender, RoutedEventArgs e)
         {
-            var apiclient = new Client("https://localhost:/44345", new HttpClient());
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
             var adherent = await apiclient.ProduitsGetAsync();
         }
         #endregion
@@ -38,7 +38,7 @@ namespace Raminagrobis.WPF
         #region BtnInsert
         private void BtnInsert(object sender, RoutedEventArgs e)
         {
-            var apiclient = new Client("https://localhost:/44345", new HttpClient());
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
             Produits_DTO produits_DTO = new Produits_DTO();
             produits_DTO.Reference = InputReference.Text;
             produits_DTO.Libelle = InputLibelle.Text;
