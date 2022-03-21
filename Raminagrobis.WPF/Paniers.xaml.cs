@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Raminagrobis.API.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,11 +20,22 @@ namespace Raminagrobis.WPF
     /// <summary>
     /// Logique d'interaction pour Paniers.xaml
     /// </summary>
-    public partial class Paniers : Page
+    public partial class Propositions : Page
     {
-        public Paniers()
+        public Propositions()
         {
             InitializeComponent();
         }
+        
+        #region LoadPage
+        private async void LoadPage(object sender, RoutedEventArgs e)
+        {
+            var apiclient = new Client("https://localhost:44345", new HttpClient());
+            var produits = await apiclient.PaniersGetAsync();
+
+            lvProduits.ItemsSource = produits;
+        }
+        #endregion
+
     }
 }

@@ -11,7 +11,7 @@ namespace Raminagrobis.WPF
         static public MainWindow? MainWindow;
         static public Adherents? Adherents;
         static public Fournisseur? Fournisseur;
-        static public Paniers? Paniers;
+        static public Propositions? Paniers;
         static public Produits? Produits;
         
     }

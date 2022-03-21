@@ -60,7 +60,7 @@ namespace Raminagrobis.DAL.Depot
             }
             else
             {
-                throw new Exception($"Aucune occurance à l'ID {ID} dans la table Produits");
+                throw new Exception($"Aucune occurence à l'ID {ID} dans la table Produits");
             }
 
 

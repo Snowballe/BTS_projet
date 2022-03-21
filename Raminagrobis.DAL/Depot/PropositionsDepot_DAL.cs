@@ -15,7 +15,7 @@ namespace Raminagrobis.DAL.Depot
         {
             CreerConnexionEtCommande();
 
-            commande.CommandText = "SELECT id, prix FROM Propositions";
+            commande.CommandText = "SELECT id,id_ligne_global,id_fournisseur,id_produit,prix FROM Propositions";
             var reader = commande.ExecuteReader();
 
             var listePropositions = new List<Propositions_DAL>();
@@ -23,7 +23,10 @@ namespace Raminagrobis.DAL.Depot
             while (reader.Read())
             {
                 var commande = new Propositions_DAL(reader.GetInt32(0),
-                    reader.GetInt16(1));
+                    reader.GetInt32(1),
+                    reader.GetInt32(2),
+                    reader.GetInt32(3),
+                    reader.GetInt32(4));
 
                 listePropositions.Add(commande);
             }
@@ -37,7 +40,27 @@ namespace Raminagrobis.DAL.Depot
         #region GetByID
         public override Propositions_DAL GetByID(int ID)
         {
-            throw new NotImplementedException();
+            CreerConnexionEtCommande();
+
+            commande.CommandText = "SELECT id,id_ligne_global,id_fournisseur,id_produit,prix FROM Propositions where id=@id";
+            commande.Parameters.Add(new SqlParameter("@id",ID));
+            var reader = commande.ExecuteReader();
+
+            Propositions_DAL maprop;
+            if (reader.Read())
+            {
+                maprop = new Propositions_DAL(reader.GetInt32(0),
+                    reader.GetInt32(1),
+                    reader.GetInt32(2),
+                    reader.GetInt32(3),
+                    reader.GetInt32(4));
+            }
+            else
+            {
+                throw new Exception($"Aucune ocurrence de proposition à l'ID {ID}");
+            }
+            DetruireConnexionEtCommande();
+            return maprop;
         }
         #endregion
 
@@ -146,7 +169,18 @@ namespace Raminagrobis.DAL.Depot
         #region Delete
         public override void Delete(Propositions_DAL propositions)
         {
-            throw new NotImplementedException();
+            CreerConnexionEtCommande();
+            commande.CommandText = "delete from Propositions where id=@id";
+            commande.Parameters.Add(new SqlParameter("@id", propositions.ID));
+
+            var ligneaffecte=commande.ExecuteNonQuery();
+
+            if(ligneaffecte < 0)
+            {
+                throw new Exception($"Impossible de supprimer le produit d'ID {propositions.ID}");
+            }
+            DetruireConnexionEtCommande();
+
         }
         #endregion
     }

@@ -95,7 +95,7 @@ namespace Raminagrobis.WPF
                 {
                     Main.Content = new FournisseurInsert();
                 }
-                if (Main.Content.GetType() == typeof(Paniers))
+                if (Main.Content.GetType() == typeof(Propositions))
                 {
                     //Main.Content = new PaniersInsert();
                 }
@@ -144,7 +144,7 @@ namespace Raminagrobis.WPF
                 {
                     Main.Content = new FournisseurDelete();
                 }
-                if (Main.Content.GetType() == typeof(Paniers))
+                if (Main.Content.GetType() == typeof(Propositions))
                 {
                     //Main.Content = new PaniersDelete();
                 }
