@@ -60,12 +60,12 @@ namespace Raminagrobis.WPF
         }
         #endregion
 
-        #region BtnPaniers
-        private void BtnPaniers(object sender, RoutedEventArgs e)
+        #region BtnProposition
+        private void BtnProposition(object sender, RoutedEventArgs e)
         {
-            if (GestionnaireDeFenetres.Paniers == null)
+            if (GestionnaireDeFenetres.Propositions == null)
             {
-                GestionnaireDeFenetres.Paniers = new Paniers();
+                GestionnaireDeFenetres.Propositions = new Propositions();
             }
             Main.Navigate(GestionnaireDeFenetres.Paniers);
         }

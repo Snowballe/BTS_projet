@@ -22,7 +22,7 @@ namespace Raminagrobis.METIER.Metier
 
         public Propositions_METIER(int id_ligne_global, int id_fournisseur, int prix) => (ID_ligne_global, ID_fournisseur, Prix) = (id_ligne_global, id_fournisseur, prix);
         public Propositions_METIER(int id, int id_ligne_global, int id_fournisseur, int prix) => (ID, ID_ligne_global, ID_fournisseur, Prix) = (id,id_ligne_global, id_fournisseur, prix);
-        public Propositions_METIER(int id,int id_produit, int id_ligne_global, int id_fournisseur, int prix) => (ID,ID_produit,ID_ligne_global, ID_fournisseur, Prix) = (id,id_ligne_global, id_fournisseur, prix);
+        public Propositions_METIER(int id,int id_produit, int id_ligne_global, int id_fournisseur, int prix) => (ID,ID_produit,ID_ligne_global, ID_fournisseur, Prix) = (id,id_produit,id_ligne_global, id_fournisseur, prix);
 
         #region Insert
         public void Insert()

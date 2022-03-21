@@ -13,6 +13,7 @@ namespace Raminagrobis.WPF
         static public Fournisseur? Fournisseur;
         static public Propositions? Paniers;
         static public Produits? Produits;
+        static public Propositions? Propositions;
         
     }
 }

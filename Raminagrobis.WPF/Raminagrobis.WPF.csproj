@@ -27,19 +27,19 @@
     <Compile Update="PropositionDelete.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ProduitsUpdate.xaml.cs">
+    <Compile Update="Produits\ProduitsUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ProduitsInsert.xaml.cs">
+    <Compile Update="Produits\ProduitsInsert.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ProduitsDelete.xaml.cs">
+    <Compile Update="Produits\ProduitsDelete.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="FournisseurUpdate.xaml.cs">
+    <Compile Update="Fournisseur\FournisseurUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="FournisseurInsert.xaml.cs">
+    <Compile Update="Fournisseur\FournisseurInsert.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainWindow.xaml.cs">
@@ -48,19 +48,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="AdherentDelete.xaml">
+    <Page Update="Aherent\AdherentDelete.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Adherent.xaml">
+    <Page Update="Aherent\Adherent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Fournisseur.xaml">
+    <Page Update="Fournisseur\Fournisseur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Propositions.xaml">
+    <Page Update="Propositions\Propositions.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="PropositionsUpdate.xaml">
@@ -75,23 +75,23 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ProduitsUpdate.xaml">
+    <Page Update="Produits\ProduitsUpdate.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ProduitsInsert.xaml">
+    <Page Update="Produits\ProduitsInsert.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ProduitsDelete.xaml">
+    <Page Update="Produits\ProduitsDelete.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="FournisseurUpdate.xaml">
+    <Page Update="Fournisseur\FournisseurUpdate.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="FournisseurInsert.xaml">
+    <Page Update="Fournisseur\FournisseurInsert.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -99,7 +99,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Produits.xaml">
+    <Page Update="Produits\Produits.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Proposition.xaml">
