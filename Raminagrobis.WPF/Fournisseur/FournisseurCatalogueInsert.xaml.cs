@@ -23,7 +23,7 @@ namespace Raminagrobis.WPF
     /// <summary>
     /// Logique d'interaction pour Catalogue.xaml
     /// </summary>
-    public partial class Catalogue : Page
+    public partial class FournisseurCatalogueInsert.xaml : Page
     {
         #region InitializeComponent
         Fournisseur_DTO fournisseur;
